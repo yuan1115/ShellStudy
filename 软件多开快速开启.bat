@@ -84,6 +84,11 @@ pause
 		call:add
 		goto:eof
 	)
+	set /p op=是否快捷启动软件（y/n）：
+	if "%op%"=="y" (
+		call:open
+		goto:eof
+	)
 	goto:eof
 
 :open
@@ -114,7 +119,7 @@ pause
 		)
 		set /a m+=1
 	)
-	set /p jx=是否继续添加（y/n）：
+	set /p jx=是否继续启动（y/n）：
 	if "%jx%"=="y" (
 		call:open
 		goto:eof
